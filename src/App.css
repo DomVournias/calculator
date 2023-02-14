@@ -1,38 +1,101 @@
-.App {
+.calculator {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
+  height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #6c6c6c;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  position: relative;
+  background-color: var(--darker);
+  padding: 3px;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.extented-width {
+  width: 160px;
+}
+
+.extented-height {
+  height: 130px;
+  position: absolute;
+  bottom: 0;
+}
+
+.number {
+  background-color: var(--light);
+}
+
+.number:hover {
+  background-color: var(--dark);
+}
+
+.number:active {
+  background-color: var(--darker);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.symbol {
+  font-size: 1rem;
+  background-color: var(--dark);
+}
+
+.symbol:hover {
+  background-color: var(--light);
+}
+
+.symbol:active {
+  background-color: var(--dark);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.orange {
+  color: var(--dark);
+  background-color: var(--orange);
+}
+
+.orange:hover {
+  background-color: var(--orange);
+  opacity: 0.9;
+}
+
+.orange:active {
+  color: var(--dark);
+  background-color: var(--orange);
+  opacity: 0.8;
+}
+
+#display {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: right;
+  padding: 10px 20px;
+}
+
+.buttons {
+  display: block;
+}
+
+button {
+  font-size: 1.1rem;
+  /* font-weight: 100; */
+  position: relative;
+  width: 90px;
+  height: 65px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+#clear {
+  font-size: 0.8rem;
 }
